@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Vamos por un café, Andrea?</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #f48fb1;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 50px;
+      font-size: 1em;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #f06292;
+    }
+
+    #respuesta {
+      margin-top: 20px;
+      font-size: 1.2em;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Andrea, ¿quieres ir por un café conmigo? ☕💕</h1>
+    <button onclick="responder('si')">Sí</button>
+    <button onclick="responder('no')">No</button>
+    <div id="respuesta"></div>
+  </div>
+
+  <script>
+    function responder(respuesta) {
+      const div = document.getElementById("respuesta");
+      if (respuesta === "si") {
+        div.innerHTML = "¡perfecto💕, puedes ponerte lo que tu quieras, igual siempre te ves linda!☕💕";
+      } else {
+        div.innerHTML = "Oh no 😢 Tal vez otro día... seguiré soñando ☁️";
+      }
+    }
+  </script>
+</body>
+</html>
